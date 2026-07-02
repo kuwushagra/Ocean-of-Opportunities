@@ -1,11 +1,18 @@
-title: "Kushagra's Corner"
-description: My Portfolio Website
-baseurl: "/"
-url: "https://kuwushagra.github.io"
-headername: "Kushagra's Corner"
-footername: Kushagra Bhagat
-githublink: https://github.com/kuwushagra
-mailaddress: kushagrabhagat.work@gmail.com
+# Ocean of Opportunities config file
+# >> Edit lines below as per your needs >>
+title: "Ocean of Opportunities" # Site name
+description: A Jekyll powered personal portfolio website theme # Site desciption
+baseurl: "/Ocean-of-Opportunities/" # Path to repository, if using in 'yourname.github.io' repository, change to '"/" else put repository name here.
+url: "https://kuwushagra.github.io" # URL of your website
+headername: "Ocean of Opportunities" # Name to show in top left of website
+footername: Kushagra Bhagat # Name which appears in the footer
+githublink: https://github.com/yourgithubusername # Link to your GitHub profile
+mailaddress: youremailadresshere # Put your e-mail id here
+fishlinks: # Links the fish open on clicking. You can put as many as you want but links will cycle in batches of 3.
+  - "/projects/Project1"
+  - "/projects/Project2"
+  - "/projects/Project3"
+# >> Advanced config below. You need not edit this for basic theme functionality >>
 collections:
   projects:
     output: true
@@ -14,8 +21,3 @@ collections:
   posts:
     output: true
     permalink: /posts/:year/:month/:day/:title.html
-fishlinks: 
-  - "/projects/Geepac"
-  - "/projects/SimpliFile"
-  - "/projects/NeuroSleep"
-  - "/projects/Ocean-of-Opportunities"
