@@ -316,8 +316,10 @@ animateWaves();
 
 const fishLayer = document.getElementById("fishLayer");
 
-const fishUrls = {{ site.fishlinks | jsonify }};
-
+const baseUrl = "{{ site.baseurl }}";
+const relativeFishUrls = {{ site.fishlinks | jsonify }};
+const fishUrls = relativeFishUrls.map(link => `${baseUrl}/${link}`);
+  
 const colors = ["#3a86ff", "#8338ec", "#ff006e", "#06d6a0", "#ffd166"];
 
 const fishes = [];
