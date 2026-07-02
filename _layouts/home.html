@@ -40,11 +40,11 @@ layout: default
     <h1 >I am a </h1> 
     <h1><span class="typing-text"></span><span class="cursor">|</span></h1>
     <p style="font-size: 1em; margin: 0 auto; text-align: center"><br>{{ site.description }}<br><br><p style="font-size: 0.75em;">{{ page. submessage }}</p></p>
-  </div><br>
+  </div>
 
   {% if page.buttontext and page.buttonlink %}
-  <div style="display: flex; width: 100%; margin: 0 auto; justify-content: center; align-items: center;">
-    <a href="{{ page.buttonlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+  <br><div style="display: flex; width: 100%; margin: 0 auto; justify-content: center; align-items: center;">
+    <a href="{{ site.baseurl }}/{{ page.buttonlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
       <wa-icon name="angle-right"></wa-icon>
       <span>{{ page.buttontext }}</span> 
     </a>
