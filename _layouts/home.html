@@ -56,7 +56,7 @@ layout: default
   </div><br>
   
   <script>
-    const words = ["Developer", "Designer", "Freelancer"];
+    const words = {{ page.descriptors | jsonify }};
 
     let i = 0;
     let j = 0;
