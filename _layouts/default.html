@@ -19,9 +19,8 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 #svg {
@@ -270,25 +269,13 @@ xmlns="http://www.w3.org/2000/svg">
   </br>
 </header>
 
-<style>
-  body { display: block; }
-</style>
-
 <main>
   {{ content }}
 </main>
 
-<style>
-  body { display: flex; }
-</style>
-  
 <footer>
   <p>&copy; {{ "now" | date: "%Y" }} {{ site.author }}. All rights reserved</p>
 </footer>
-  
-<style>
-  body { display: block; }
-</style>
   
 <script>
 
