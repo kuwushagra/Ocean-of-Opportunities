@@ -1,7 +1,7 @@
 ---
 layout: project
 projectname: Project 1
-description: Demo Project One with a very Long description to take full width of page
+description: Demo Project One
 projectimage: https://static.vecteezy.com/system/resources/thumbnails/049/855/296/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg
 projectlink: https://github.com/
 downloadlink: https://github.com/
