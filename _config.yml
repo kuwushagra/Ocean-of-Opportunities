@@ -4,7 +4,7 @@ title: "Ocean of Opportunities" # Name to show in top left of website and to sea
 description: A Jekyll powered personal portfolio website theme # Site desciption
 baseurl: "/Ocean-of-Opportunities" # Path to repository, if using in 'yourname.github.io' repository, change to "" (blank) else put repository name here.
 url: "https://kuwushagra.github.io" # URL of your website
-footername: Kushagra Bhagat # Name which appears in the footer
+author: Kushagra Bhagat # Name of the author, which also appears in the footer
 githublink: https://github.com/yourgithubusername # Link to your GitHub profile
 mailaddress: youremailadresshere # Put your e-mail id here
 fishlinks: # Links the fish open on clicking. You can put as many as you want but links will cycle in batches of 3.
