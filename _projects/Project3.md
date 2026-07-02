@@ -4,6 +4,11 @@ projectname: Project 3
 description: Demo Project Three
 projectimage: https://media.istockphoto.com/id/583809524/photo/alberta-wilderness-near-banff.jpg?s=612x612&w=0&k=20&c=hiI3ib9ibDxAgqEZEH09EO3JOw94v5xh6hzcuXGhO-M=
 projectlink: https://github.com/
+multidownload: true
+multidlwindows: https://github.com/
+multidllinux: https://github.com/
+multidlmacosx86: https://github.com/kuwushagra/
+multidlmacosarm: https://github.com/kuwushagra/
 visitlink: https://github.com/
 ---
 
