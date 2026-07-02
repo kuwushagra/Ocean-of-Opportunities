@@ -2,7 +2,7 @@
 # >> Edit lines below as per your needs >>
 title: "Ocean of Opportunities" # Site name
 description: A Jekyll powered personal portfolio website theme # Site desciption
-baseurl: "/Ocean-of-Opportunities/" # Path to repository, if using in 'yourname.github.io' repository, change to '"/" else put repository name here.
+baseurl: "/Ocean-of-Opportunities" # Path to repository, if using in 'yourname.github.io' repository, change to '"/" else put repository name here.
 url: "https://kuwushagra.github.io" # URL of your website
 headername: "Ocean of Opportunities" # Name to show in top left of website
 footername: Kushagra Bhagat # Name which appears in the footer
