@@ -23,14 +23,16 @@ layout: default
     </a> 
     {% endif %}
   </div>
-  <div>&nbsp;&nbsp;</div>
+  <div>&nbsp;</div>
   <div style="margin-right: auto;">
     {% if page.downloadlink %}
+    &nbsp;
     <a href="{{ page.downloadlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
       <span><wa-icon slot="start" name="download"></wa-icon> Download</span> 
     </a>
     {% endif %}
     {% if page.visitlink %}
+    &nbsp;
     <a href="{{ page.visitlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
       <span><wa-icon name="arrow-up-right-from-square" variant="solid"></wa-icon> Visit</span> 
     </a>
