@@ -1,6 +1,6 @@
 # Ocean of Opportunities
-Showcase yourself in the Ocean of Opportunities! A Jekyll powered personal portfolio website theme <br><br>
 ![GIF Showcasing the theme](https://github.com/kuwushagra/kuwushagra.github.io/blob/main/assets/images/project_screenshots/Ocean-of-Opportunities.gif?raw=true)
+<br>Showcase yourself in the Ocean of Opportunities! A Jekyll powered personal portfolio website theme <br>
 <hr>
 
 ## Quick Start (GitHub Pages)
