@@ -6,10 +6,9 @@ submessage: "*Click the fishes to visit project pages, or just use the Navbar ab
 buttontext: Explore Features
 buttonlink: /features
 descriptors:
-  - "Smart"
-  - "Funny"
+  - "Shore seeker"
+  - "Fishful Thinker"
   - "Great themer"
-  - "Beep-boop?"
 ---
 
 The quick brown fox jumps over the lazy dog
