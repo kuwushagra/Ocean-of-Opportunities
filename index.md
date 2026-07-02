@@ -1,8 +1,10 @@
 ---
 layout: home
-title: Home | Kushagra's Corner
-yourname: Kushagra
+title: Home | Ocean of Opportunities
+yourname: Fishy
 submessage: "*Click the fishes to visit project pages, or just use the Navbar above :)"
-buttontext: About Me
-buttonlink: /about-me
+buttontext: Explore Features
+buttonlink: /features
 ---
+
+The quick brown fox jumps over the lazy dog
