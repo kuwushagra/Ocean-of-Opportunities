@@ -284,6 +284,33 @@ a:hover { color: #ffffff; text-shadow: 0 0 1px rgba(255, 255, 255, 0.8); }
 
 <body>
 
+{% if page.bgtype404 %}
+<svg id="svg" viewBox="0 0 1440 690" preserveAspectRatio="none"
+xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+<linearGradient id="gradient" x1="56%" y1="0%" x2="44%" y2="100%">
+  <stop offset="0%" stop-color="#cc0000" stop-opacity="0.18"/>
+  <stop offset="100%" stop-color="#cc0000" stop-opacity="0.03"/>
+</linearGradient>
+</defs>
+
+<path id="waveBack"
+  fill="url(#gradient)"
+  stroke="#800000"
+  stroke-opacity="0.2"
+  stroke-width="1"
+  opacity="0.5"></path>
+
+<path id="waveFront"
+  fill="url(#gradient)"
+  stroke="#800000"
+  stroke-opacity="0.3"
+  stroke-width="1.2"
+  opacity="0.9"></path>
+
+</svg>
+{% else %}
 <svg id="svg" viewBox="0 0 1440 690" preserveAspectRatio="none"
 xmlns="http://www.w3.org/2000/svg">
 
@@ -309,7 +336,8 @@ xmlns="http://www.w3.org/2000/svg">
   opacity="0.9"></path>
 
 </svg>
-
+{% endif %}
+  
 <svg id="fishLayer" viewBox="0 0 1440 690"
 xmlns="http://www.w3.org/2000/svg">
 
