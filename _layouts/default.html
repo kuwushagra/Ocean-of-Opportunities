@@ -270,9 +270,17 @@ xmlns="http://www.w3.org/2000/svg">
   </br>
 </header>
 
+<style>
+  body { display: block; }
+</style>
+
 <main>
   {{ content }}
 </main>
+
+<style>
+  body { display: flex; }
+</style>
 
 <footer>
   <p>&copy; {{ "now" | date: "%Y" }} {{ site.footername }}. All rights reserved</p>
