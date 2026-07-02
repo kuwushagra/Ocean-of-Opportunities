@@ -33,9 +33,9 @@ layout: default
     {% endif %}
     {% if page.multidownload %}
     &nbsp;
-    <button id="openModal" class="glowing-btn" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+    <a href="javascript:void(0)" id="openModal" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
       <span><wa-icon slot="start" name="download"></wa-icon> Download</span> 
-    </button>
+    </a>
     
     <div id="popup" class="popup">
     <div class="popup-content">
@@ -43,30 +43,30 @@ layout: default
 
         <h2>Choose Platform</h2>
         <div style="display: flex; width: 100%; margin: 0 auto; justify-content: center; align-items: center">
-        <div style="margin-left: auto;">
+        <div><br>
           {% if page.multidlwindows %}
           <a href="{{ page.multidlwindows }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
-            <span><wa-icon library="brands" name="windows"></wa-icon> Windows</span> 
-          </a> &nbsp;&nbsp;
+            <span><wa-icon name="windows" family="brands" style="font-size: 1.1em"></wa-icon> Windows</span> 
+          </a> <br><br>
           {% endif %}
           {% if page.multidllinux %}
           <a href="{{ page.multidllinux }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
-            <span><wa-icon library="brands" name="linux"></wa-icon> Linux</span> 
-          </a> &nbsp;&nbsp;
+            <span><wa-icon name="linux" family="brands" style="font-size: 1.1em"></wa-icon> Linux</span> 
+          </a> <br><br>
           {% endif %}
           {% if page.multidlmacos %}
           <a href="{{ page.multidlmacos }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
-            <span><wa-icon library="brands" name="apple"></wa-icon> macOS</span> 
-          </a> &nbsp;&nbsp;
+            <span><wa-icon name="apple" family="brands" style="font-size: 1.1em"></wa-icon> macOS</span> 
+          </a> <br><br>
           {% endif %}
           {% if page.multidlmacosx86 %}
           <a href="{{ page.multidlmacosx86 }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
-            <span><wa-icon library="brands" name="apple"></wa-icon> macOS x86</span> 
-          </a> &nbsp;&nbsp;
+            <span><wa-icon name="apple" family="brands" style="font-size: 1.1em"></wa-icon> macOS x86</span> 
+          </a> <br><br>
           {% endif %}
           {% if page.multidlmacosarm %}
           <a href="{{ page.multidlmacosarm }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
-            <span><wa-icon library="brands" name="apple"></wa-icon> macOS ARM</span> 
+            <span><wa-icon name="apple" family="brands" style="font-size: 1.1em"></wa-icon> macOS ARM</span> 
           </a>
           {% endif %}
         </div></div>
