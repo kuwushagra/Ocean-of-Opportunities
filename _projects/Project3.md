@@ -2,7 +2,7 @@
 layout: project
 projectname: Project 3
 description: Demo Project Three
-projectimage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjmw6nNhZyJc8bIUARKXeukubKqVTtGN9g3HxLTlh_VQ&s=10
+projectimage: https://media.istockphoto.com/id/583809524/photo/alberta-wilderness-near-banff.jpg?s=612x612&w=0&k=20&c=hiI3ib9ibDxAgqEZEH09EO3JOw94v5xh6hzcuXGhO-M=
 projectlink: https://github.com/
 visitlink: https://github.com/
 ---
