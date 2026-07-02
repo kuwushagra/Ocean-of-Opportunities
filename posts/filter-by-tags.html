@@ -1,0 +1,45 @@
+---
+layout: default
+title: Posts | Kushagra's Corner
+---
+  
+<h1>Blog Posts</h1>
+
+  <div style="display: flex; width: 100%; margin: 0 auto;">
+    <a href="/posts" class="glowing-btn" style="margin-left: 0; justify-content: center; align-items: center;">
+      <span>All</span> 
+    </a>
+    &nbsp; &nbsp;
+    <a href="/posts/filter-by-tags" class="glowing-btn-pressed" style="justify-content: center; align-items: center;">
+      <span>Tags</span> 
+    </a>
+    &nbsp; &nbsp;
+    <a href="/posts/filter-by-categories" class="glowing-btn" style="justify-content: center; align-items: center;">
+      <span>Categories</span> 
+    </a>
+  </div><br>
+
+<div class="tag-cloud">
+  {% for tag in site.tags %}
+    <a href="#{{ tag[0] | slugify }}">{{ tag[0] }} ({{ tag[1].size }})</a>
+  {% endfor %}
+</div><br>
+
+<div class="tag-groups">
+  {% for tag in site.tags %}
+    <div id="{{ tag[0] | slugify }}" class="tag-group">
+      <h2>#{{ tag[0] }}</h2>
+      <ul class="post-list" style="list-style-type: none; padding-left: 0; margin: 0">
+        {% for post in tag[1] %}
+          <li style="padding-left: 0; margin: 0">
+            <a href="{{ post.url | relative_url }}" class="glowing-btn" style="display: block; width: 100%; padding: 25px; border-radius: 15px;">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt | strip_html | truncatewords: 10 }}</p>
+              <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+            </a>
+          </li><br>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

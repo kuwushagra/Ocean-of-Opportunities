@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+  <div style="width: 100%; margin: 0 auto; justify-content: center; align-items: center">
+    <div class="glowing-box" style="margin: 0 auto; width: 100%;">
+      <a href="/">Home</a> > <a href="/projects/">Projects</a> > {{ page.projectname }}
+    </div><br><br>
+    
+    <div class="glowing-box" style="display: block; width: 100%;">
+      <div style="display: flex"><div style="margin-top: auto; margin-bottom: auto;"><br><h1>{{ page.projectname }}</h1></div></div>
+      <hr>
+      <img src="{{ page.projectimage }}"><br>
+      <div style="text-align: center">{{ page.description }}</div><br>
+    </div>
+  </div><br>
+
+<div style="display: flex; width: 100%; margin: 0 auto; justify-content: center; align-items: center">
+  <div style="margin-left: auto;">
+    {% if page.projectlink %}
+    <a href="{{ page.projectlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+      <span><wa-icon name="github" family="brands" style="font-size: 1.1em"></wa-icon> GitHub</span> 
+    </a> 
+    {% endif %}
+  </div>
+  <div>&nbsp;&nbsp;</div>
+  <div style="margin-right: auto;">
+    {% if page.downloadlink %}
+    <a href="{{ page.downloadlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+      <span><wa-icon slot="start" name="download"></wa-icon> Download</span> 
+    </a>
+    {% endif %}
+    {% if page.visitlink %}
+    <a href="{{ page.visitlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+      <span><wa-icon name="arrow-up-right-from-square" variant="solid"></wa-icon> Visit</span> 
+    </a>
+    {% endif %}
+  </div>
+  </div>
+<br>
+
+  {{ content }}

@@ -1,0 +1,21 @@
+title: "Kushagra's Corner"
+description: My Portfolio Website
+baseurl: "/"
+url: "https://kuwushagra.github.io"
+headername: "Kushagra's Corner"
+footername: Kushagra Bhagat
+githublink: https://github.com/kuwushagra
+mailaddress: kushagrabhagat.work@gmail.com
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+  posts:
+    output: true
+    permalink: /posts/:year/:month/:day/:title.html
+fishlinks: 
+  - "/projects/Geepac"
+  - "/projects/SimpliFile"
+  - "/projects/NeuroSleep"
+  - "/projects/Ocean-of-Opportunities"

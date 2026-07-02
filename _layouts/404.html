@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #000;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+#fishLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fish {
+  cursor: pointer;
+  pointer-events: all;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.35));
+}
+
+header, main {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+}
+
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+  
+.myname {
+    font-family: "Bitcount Single", system-ui;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0.5,
+      "ELSH" 0,
+      "ELXP" 0;
+}
+h1 { margin-bottom: 0; text-shadow: 0 0 0px rgba(0,0,0,0); }
+a { color: #bdc3c7; text-decoration: none; }
+a:hover { color: #ffffff; text-shadow: 0 0 1px rgba(255, 255, 255, 0.8); }
+  
+</style>
+</head>
+
+<body>
+
+<svg id="svg" viewBox="0 0 1440 690" preserveAspectRatio="none"
+xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+<linearGradient id="gradient" x1="56%" y1="0%" x2="44%" y2="100%">
+  <stop offset="0%" stop-color="#cc0000" stop-opacity="0.18"/>
+  <stop offset="100%" stop-color="#cc0000" stop-opacity="0.03"/>
+</linearGradient>
+</defs>
+
+<path id="waveBack"
+  fill="url(#gradient)"
+  stroke="#800000"
+  stroke-opacity="0.2"
+  stroke-width="1"
+  opacity="0.5"></path>
+
+<path id="waveFront"
+  fill="url(#gradient)"
+  stroke="#800000"
+  stroke-opacity="0.3"
+  stroke-width="1.2"
+  opacity="0.9"></path>
+
+</svg>
+
+<svg id="fishLayer" viewBox="0 0 1440 690"
+xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+<g id="fishTemplate">
+  <g class="fish" fill="none" stroke-width="1.5">
+    <path d="M30,0 C20,-12 -10,-12 -25,0 C-10,12 20,12 30,0 Z"/>
+    <path d="M-25,0 L-40,-12 L-35,0 L-40,12 Z"/>
+  </g>
+</g>
+</defs>
+
+</svg>
+
+<header>
+  <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.8.0/styles/webawesome.css" />
+  <script type="module" src="https://ka-f.webawesome.com/webawesome@3.8.0/webawesome.loader.js"></script>
+  
+  <div style="display: flex; background: rgba(128, 128, 128, 0.2); border-radius: 12px; padding: 16px;">
+    <div style="display: inline-block; margin-top: auto; margin-right: auto;"><div style="display: inline-block; margin-top: auto; margin-right: auto;"><a href="{{ site.url }}/"><h1 style="font-size: 1.1em" class="myname">{{ site.headername }}</h1></a></div>
+     <div style="display: inline-block; margin-top: auto; margin-left: auto" class="links">
+      <a href="mailto:{{ site.mailaddress }}"><wa-icon name="envelope" variant="regular" style="color: salmon; font-size: 1.1em"></wa-icon></a>
+      <a href="{{ site.githublink }}"><wa-icon name="github-alt" family="brands" style="color: steelblue; font-size: 1.1em"></wa-icon></a>
+  </div></div>
+  <div style="display: inline-block; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
+  [ <a href="/about">About Site</a> | <a href="/projects/">My Projects</a> | <a href="/posts/">Blog Posts</a> ]</div>
+ </div>
+  </br>
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer>
+  <p>&copy; {{ "now" | date: "%Y" }} {{ site.footername }}. All rights reserved</p>
+</footer>
+
+<script>
+
+const waveBack = document.getElementById("waveBack");
+const waveFront = document.getElementById("waveFront");
+
+let t = 0;
+
+function makeWave(baseY, amp, speed, phase) {
+
+  let d = `M 0 690 L 0 ${baseY}`;
+
+  for (let x = 0; x <= 1440; x += 40) {
+
+    const y =
+      baseY +
+      Math.sin(x * 0.006 + t * speed + phase) * amp +
+      Math.sin(x * 0.012 + t * 0.7) * (amp * 0.5) +
+      Math.cos(x * 0.018 + t * 1.3) * (amp * 0.25);
+
+    d += ` L ${x} ${y}`;
+  }
+
+  return d + " L 1440 690 Z";
+}
+
+function animateWaves() {
+  t += 0.02;
+
+  waveBack.setAttribute("d", makeWave(580, 18, 0.9, 0));
+  waveFront.setAttribute("d", makeWave(545, 28, 1.3, 3));
+
+  requestAnimationFrame(animateWaves);
+}
+
+animateWaves();
+
+const fishLayer = document.getElementById("fishLayer");
+
+const fishUrls = {{ site.fishlinks | jsonify }};
+
+const colors = ["#3a86ff", "#8338ec", "#ff006e", "#06d6a0", "#ffd166"];
+
+const fishes = [];
+const MAX_ACTIVE = 3;
+const WATER_LINE = 560;
+
+function randColor() {
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+for (let i = 0; i < fishUrls.length; i++) {
+
+  const el = document.getElementById("fishTemplate").cloneNode(true);
+  el.removeAttribute("id");
+
+  el.querySelector(".fish").setAttribute("stroke", randColor());
+
+  fishLayer.appendChild(el);
+
+  el.addEventListener("click", () => {
+    window.location.href = fishUrls[i];
+  });
+
+  fishes.push({
+    el,
+    active: false,
+    alpha: 0,
+    x: Math.random() * 1200,
+    vx: 1 + Math.random() * 2,
+    t: 0,
+    cooldown: Math.random() * 100,
+    power: 40 + Math.random() * 30,
+    interval: 120 + Math.random() * 200
+  });
+}
+
+function activeCount() {
+  return fishes.filter(f => f.active).length;
+}
+
+function step(f) {
+
+  if (!f.active) {
+    f.cooldown--;
+    if (f.cooldown <= 0 && activeCount() < MAX_ACTIVE) {
+      f.active = true;
+      f.t = 0;
+      f.x = Math.random() * 1200;
+    }
+    return;
+  }
+
+  f.t += 0.05;
+
+  const x = f.x + f.vx * f.t * 12;
+  const y = WATER_LINE - (f.power * f.t - 0.5 * 9.8 * f.t * f.t);
+
+  if (f.alpha < 1 && f.t < 1) f.alpha += 0.05;
+  if (x > 1300 || y > WATER_LINE + 50) f.alpha -= 0.08;
+
+  f.alpha = Math.max(0, Math.min(1, f.alpha));
+  f.el.style.opacity = f.alpha;
+
+  const rot = Math.min(f.t * 10 - 40, 75);
+
+  f.el.setAttribute(
+    "transform",
+    `translate(${x},${y}) rotate(${rot}) scale(1.6)`
+  );
+
+  if (f.alpha <= 0) {
+    f.active = false;
+    f.cooldown = f.interval;
+    f.t = 0;
+  }
+}
+
+function loop() {
+  fishes.forEach(step);
+  requestAnimationFrame(loop);
+}
+
+loop();
+
+</script>
+
+</body>
+</html>
