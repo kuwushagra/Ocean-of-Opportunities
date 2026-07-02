@@ -31,6 +31,48 @@ layout: default
       <span><wa-icon slot="start" name="download"></wa-icon> Download</span> 
     </a>
     {% endif %}
+    {% if page.multidownload %}
+    &nbsp;
+    <button id="openModal" class="glowing-btn" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+      <span><wa-icon slot="start" name="download"></wa-icon> Download</span> 
+    </button>
+    
+    <div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="closeModal">&times;</span>
+
+        <h2>Choose Platform</h2>
+        <div style="display: flex; width: 100%; margin: 0 auto; justify-content: center; align-items: center">
+        <div style="margin-left: auto;">
+          {% if page.multidlwindows %}
+          <a href="{{ page.multidlwindows }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+            <span><wa-icon library="brands" name="windows"></wa-icon> Windows</span> 
+          </a> &nbsp;&nbsp;
+          {% endif %}
+          {% if page.multidllinux %}
+          <a href="{{ page.multidllinux }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+            <span><wa-icon library="brands" name="linux"></wa-icon> Linux</span> 
+          </a> &nbsp;&nbsp;
+          {% endif %}
+          {% if page.multidlmacos %}
+          <a href="{{ page.multidlmacos }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+            <span><wa-icon library="brands" name="apple"></wa-icon> macOS</span> 
+          </a> &nbsp;&nbsp;
+          {% endif %}
+          {% if page.multidlmacosx86 %}
+          <a href="{{ page.multidlmacosx86 }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+            <span><wa-icon library="brands" name="apple"></wa-icon> macOS x86</span> 
+          </a> &nbsp;&nbsp;
+          {% endif %}
+          {% if page.multidlmacosarm %}
+          <a href="{{ page.multidlmacosarm }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
+            <span><wa-icon library="brands" name="apple"></wa-icon> macOS ARM</span> 
+          </a>
+          {% endif %}
+        </div></div>
+      </div>
+    </div>
+    {% endif %}
     {% if page.visitlink %}
     &nbsp;
     <a href="{{ page.visitlink }}" class="glowing-btn" style="margin: 0 auto; justify-content: center; align-items: center;">
