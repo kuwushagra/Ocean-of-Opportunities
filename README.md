@@ -24,7 +24,7 @@
 All major settings are managed in the `_config.yml` file. Open this file and update the following fields:
 
 * **Site Settings:** Update the `title`, `description`, and `author` name.
-* **URLs:** Set `url` to `https://YOUR_USERNAME.github.io`. Ensure `baseurl` is set to `""` if you are using a user site.
+* **URLs:** Set `url` to `https://YOUR_USERNAME.github.io`. Ensure `baseurl` is set to `"/"` if you are using a user site.
 * **Social Links:** Fill in your username handle for GitHub, and E-mail to activate navbar social links.
 
 ### Adding New Posts
