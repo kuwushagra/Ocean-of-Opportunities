@@ -1,8 +1,8 @@
 ---
 layout: project
 projectname: Project 1
-description: Demo Project One
-projectimage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTruD1UHRSs_XcwjbfggxTzccV472cHb2wj01ed_HNahg&s=10
+description: Demo Project One with a very Long description to take full width of page
+projectimage: https://static.vecteezy.com/system/resources/thumbnails/049/855/296/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg
 projectlink: https://github.com/
 downloadlink: https://github.com/
 ---
