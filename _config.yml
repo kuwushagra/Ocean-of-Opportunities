@@ -1,10 +1,9 @@
 # Ocean of Opportunities config file
 # >> Edit lines below as per your needs >>
-title: "Ocean of Opportunities" # Site name
+title: "Ocean of Opportunities" # Name to show in top left of website and to search engines
 description: A Jekyll powered personal portfolio website theme # Site desciption
 baseurl: "/Ocean-of-Opportunities" # Path to repository, if using in 'yourname.github.io' repository, change to "" (blank) else put repository name here.
 url: "https://kuwushagra.github.io" # URL of your website
-headername: "Ocean of Opportunities" # Name to show in top left of website
 footername: Kushagra Bhagat # Name which appears in the footer
 githublink: https://github.com/yourgithubusername # Link to your GitHub profile
 mailaddress: youremailadresshere # Put your e-mail id here
@@ -17,7 +16,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-
   posts:
     output: true
     permalink: /posts/:year/:month/:day/:title.html
+# End of config
