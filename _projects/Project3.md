@@ -7,6 +7,7 @@ projectlink: https://github.com/
 multidownload: true
 multidlwindows: https://github.com/
 multidllinux: https://github.com/
+multidlmacos: https://github.com/kuwushagra/
 multidlmacosx86: https://github.com/kuwushagra/
 multidlmacosarm: https://github.com/kuwushagra/
 visitlink: https://github.com/
