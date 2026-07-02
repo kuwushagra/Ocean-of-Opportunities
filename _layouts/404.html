@@ -193,7 +193,15 @@ const fishLayer = document.getElementById("fishLayer");
 
 const baseUrl = "{{ site.baseurl }}";
 const relativeFishUrls = {{ site.fishlinks | jsonify }};
-const fishUrls = relativeFishUrls.map(link => `${baseUrl}/${link}`);
+let fishUrls;
+
+if (baseUrl === "") {
+  fishUrls = relativeFishUrls.map(link => `${baseUrl}${link}`);
+} else if (baseUrl === "/") {
+  fishUrls = relativeFishUrls.map(link => `${baseUrl}${link}`);
+} else {
+  fishUrls = relativeFishUrls.map(link => `${baseUrl}/${link}`);
+}
 
 const colors = ["#3a86ff", "#8338ec", "#ff006e", "#06d6a0", "#ffd166"];
 
