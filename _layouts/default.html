@@ -367,7 +367,7 @@ xmlns="http://www.w3.org/2000/svg">
   </div></div>
   <div style="display: inline-flex; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
   {% for headercomponent in site.headercomponents %} 
-       <p>&nbsp;<a href="{{ headercomponent.url }}">{{ headercomponent.name }}</a>&nbsp;</p>
+       <p>&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;</p>
     {% endfor %} 
   ]</div>
   </div>
