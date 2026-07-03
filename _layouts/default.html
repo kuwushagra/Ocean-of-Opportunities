@@ -366,7 +366,10 @@ xmlns="http://www.w3.org/2000/svg">
       <a href="{{ site.githublink }}"><wa-icon name="github-alt" family="brands" style="color: steelblue; font-size: 1.1em"></wa-icon></a>
   </div></div>
   <div style="display: inline-block; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
-  [ {% for headercomponent in site.headercomponents %} {% include headercomponent-link.html id=forloop.index name=headercomponent.name url=headercomponent.url %} |{% endfor %} ]</div>
+  [ {% for headercomponent in site.headercomponents %} 
+      {% include headercomponent-link.html id=forloop.index name=headercomponent.name url=headercomponent.url %}
+    {% endfor %} 
+  ]</div>
   </div>
   </br>
 </header>
