@@ -56,6 +56,17 @@ header, main {
   padding: 20px;
 }
 
+.header-components {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .header-components {
+    flex-direction: row;
+  }
+}
+
 main {
   max-width: 700px;
   margin: 40px auto;
@@ -281,7 +292,7 @@ a:hover { color: #ffffff; text-shadow: 0 0 1px rgba(255, 255, 255, 0.8); }
         transform: scale(1);
     }
 }
-  
+
 </style>
 </head>
 
@@ -365,12 +376,14 @@ xmlns="http://www.w3.org/2000/svg">
       <a href="mailto:{{ site.mailaddress }}"><wa-icon name="envelope" variant="regular" style="color: salmon; font-size: 1.1em"></wa-icon></a>
       <a href="{{ site.githublink }}"><wa-icon name="github-alt" family="brands" style="color: steelblue; font-size: 1.1em"></wa-icon></a>
   </div></div>
-  <div style="display: inline-flex; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
-  [ {% for headercomponent in site.headercomponents %} 
+  <div class="header-components" style="margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
+ {% for headercomponent in site.headercomponents %} 
+    {% if forloop.first %} [&nbsp;{% endif %}
        <p style="margin-bottom: 0;">&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;</p>
     {% unless forloop.last %}
         <span>|</span>
     {% endunless %}
+    {% if forloop.last %}&nbsp;]{% endif %}
     {% endfor %} 
   ]</div>
   </div>
