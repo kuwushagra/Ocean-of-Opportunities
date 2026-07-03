@@ -359,7 +359,7 @@ xmlns="http://www.w3.org/2000/svg">
   <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.8.0/styles/webawesome.css" />
   <script type="module" src="https://ka-f.webawesome.com/webawesome@3.8.0/webawesome.loader.js"></script>
   
-  <div style="display: inline-flex; background: rgba(128, 128, 128, 0.2); border-radius: 12px; padding: 16px;">
+  <div style="display: flex;background: rgba(128, 128, 128, 0.2); border-radius: 12px; padding: 16px;">
     <div style="display: inline-block; margin-top: auto; margin-right: auto;"><div style="display: inline-block; margin-top: auto; margin-right: auto;"><a href="{{ site.url }}{{ site.baseurl }}"><h1 style="font-size: 1.1em" class="myname">{{ site.title }}</h1></a></div>
      <div style="display: inline-block; margin-top: auto; margin-left: auto" class="links">
       <a href="mailto:{{ site.mailaddress }}"><wa-icon name="envelope" variant="regular" style="color: salmon; font-size: 1.1em"></wa-icon></a>
@@ -367,7 +367,7 @@ xmlns="http://www.w3.org/2000/svg">
   </div></div>
   <div style="display: inline-flex; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
   [ {% for headercomponent in site.headercomponents %} 
-       <p>&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;</p>
+       <p style="margin-bottom: 0;">&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;</p>
     {% unless forloop.last %}
         <span>|</span>
     {% endunless %}
