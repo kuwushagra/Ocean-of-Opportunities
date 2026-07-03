@@ -365,7 +365,7 @@ xmlns="http://www.w3.org/2000/svg">
       <a href="mailto:{{ site.mailaddress }}"><wa-icon name="envelope" variant="regular" style="color: salmon; font-size: 1.1em"></wa-icon></a>
       <a href="{{ site.githublink }}"><wa-icon name="github-alt" family="brands" style="color: steelblue; font-size: 1.1em"></wa-icon></a>
   </div></div>
-  <div style="display: inline-block; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
+  <div style="display: inline-flex; margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
   [ {% for headercomponent in site.headercomponents %} 
        <p> <a href="{{ headercomponent.url }}">{{ headercomponent.name }}</a> |</p>
     {% endfor %} 
