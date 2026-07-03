@@ -9,6 +9,13 @@ githublink: https://github.com/yourgithubusername # Link to your GitHub profile
 mailaddress: youremailadresshere # Put your e-mail id here
 favicon: https://raw.githubusercontent.com/kuwushagra/Ocean-of-Opportunities/refs/heads/main/assets/images/favicon.png # Path to your favicon
 footerlink: https://kuwushagra.github.io # Link to other social media or linktree, whatever you wish
+headercomponents: # Name and link of pages displayed in header
+  - name: "About"
+    url: "/about"
+  - name: "My Projects"
+    url: "/projects"
+  - name: "Blog Posts"
+    url: "/posts"
 fishlinks: # Links the fish open on clicking. You can put as many as you want but links will cycle in batches of 3.
   - "/projects/Project1"
   - "/projects/Project2"
