@@ -377,13 +377,8 @@ xmlns="http://www.w3.org/2000/svg">
       <a href="{{ site.githublink }}"><wa-icon name="github-alt" family="brands" style="color: steelblue; font-size: 1.1em"></wa-icon></a>
   </div></div>
   <div class="header-components" style="margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
- {% for headercomponent in site.headercomponents %} 
-    {% if forloop.first %} [&nbsp;{% endif %}
-       <p style="margin-bottom: 0;">&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;</p>
-    {% unless forloop.last %}
-        <span>|</span>
-    {% endunless %}
-    {% if forloop.last %}&nbsp;]{% endif %}
+    {% for headercomponent in site.headercomponents %} 
+    <p style="margin-bottom: 0;">{% if forloop.first %} [&nbsp;{% endif %}&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;{% unless forloop.last %}<span>|</span>{% endunless %}{% if forloop.last %}&nbsp;]{% endif %}</p>
     {% endfor %} 
   </div>
   </div>
