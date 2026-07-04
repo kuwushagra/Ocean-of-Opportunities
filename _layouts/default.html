@@ -6,12 +6,15 @@
   
 <title>
   {% if page.layout == "project" or page.path contains "_projects/" %}
+    {% assign title = Project | {{ page.title }} %}
     Project | {{ page.title }}
   {% elsif page.layout == "post" or page.path contains "_posts/" %}
+    {% assign title = Post | {{ page.title }} %}
     Post | {{ page.title }}
   {% else %}
+    {% assign title = {{ page.title }} | {{ site.title }} %}
     {{ page.title }} | {{ site.title }}
-  {% endif %} 
+  {% endif %}
 </title>
 
 {% if page.description %}
