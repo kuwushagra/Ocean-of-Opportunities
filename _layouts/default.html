@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 <title>
   {% if page.layout == "project" or page.path contains "_projects/" %}
     Project | {{ page.title }}
-  {% elsif age.layout == "post" or page.path contains "_posts/" %}
+  {% elsif page.layout == "post" or page.path contains "_posts/" %}
   {% else %}
     {{ page.title }} | {{ site.title }}
   {% endif %}
 </title>
+
 {% if page.description %}
   {% assign description = page.description %}
 {% else %}
