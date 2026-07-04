@@ -7,18 +7,18 @@ title: Projects | Kushagra's Corner
 <!-- !! Renders the Projects page. Do NOT add projects manually here. Make an entry for them in _projects folder. They will appear automatically. !! -->
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-<style> 
+<style>
   body { display: block; }
 </style>
 
 <div style="width: 100%; display: block;">
 <h1>My Projects</h1><br>
-
+ 
 <ul class="post-list" style="width: 100%; list-style-type: none; padding-left: 0; margin: 0">
   {% for project in site.projects %}
     <li style="padding-left: 0; margin: 0">
       <a href="{{ project.url | relative_url }}" class="glowing-btn" style="display: block; white-space: normal; width: 100%; padding: 25px; border-radius: 15px;">
-        <h3>{{ project.projectname }}</h3>
+        <h3>{{ project.title }}</h3>
          <span>{{ project.description }}</span>
       </a>
     </li><br>
