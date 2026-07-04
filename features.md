@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Features | Ocean of Opportunities
+title: Features
 ---
 
 <h1>Features</h1>
