@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home | Ocean of Opportunities
+title: Home
 yourname: Fishy
 submessage: "*Click the fishes to visit project pages, or just use the Navbar above :)"
 buttontext: Explore Features
