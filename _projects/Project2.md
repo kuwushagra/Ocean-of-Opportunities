@@ -1,8 +1,8 @@
 ---
 layout: project
-projectname: Project 2
+title: Project 2
 description: Demo Project Two
-projectimage: https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=
+image: https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=
 projectlink: https://github.com/
 downloadlink: https://github.com/
 visitlink: https://github.com/
