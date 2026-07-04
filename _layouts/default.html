@@ -8,7 +8,7 @@
   {% if page.layout == "project" or page.path contains "_projects/" %}
     Project | {{ page.title }}
   {% elsif page.layout == "post" or page.path contains "_posts/" %}
-    Page | {{ page.title }}
+    Post | {{ page.title }}
   {% else %}
     {{ page.title }} | {{ site.title }}
   {% endif %} 
