@@ -14,9 +14,9 @@
   {% else %}
     {% assign title = {{ page.title }} | {{ site.title }} %}
     {{ page.title }} | {{ site.title }}
-  {% endif %}
+  {% endif %} 
 </title>
-
+  
 {% if page.description %}
   {% assign description = page.description %}
 {% else %}
@@ -432,7 +432,7 @@ xmlns="http://www.w3.org/2000/svg">
   </div></div>
   <div class="header-components" style="margin-top: auto; margin-right: 0; margin-left: auto; text-align: right">
     {% for headercomponent in site.headercomponents %} 
-    <p style="margin-bottom: 0; white-space: nowrap">{% if forloop.first %} [&nbsp;{% endif %}&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;{% unless forloop.last %}<span>|</span>{% endunless %}{% if forloop.last %}&nbsp;]{% endif %}</p>
+    <p style="margin-bottom: 0; white-space: nowrap">{% if forloop.first %} [{% endif %}&nbsp;<a href="{{ site.baseurl }}{{ headercomponent.url }}" style="white-space: nowrap">{{ headercomponent.name }}</a>&nbsp;{% unless forloop.last %}<span>|</span>{% endunless %}{% if forloop.last %}]{% endif %}</p>
     {% endfor %} 
   </div>
   </div>
