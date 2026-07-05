@@ -9,7 +9,7 @@ defaultimage: "https://raw.githubusercontent.com/kuwushagra/Ocean-of-Opportuniti
 githublink: https://github.com/yourgithubusername # Link to your GitHub profile
 mailaddress: youremailadresshere # Put your e-mail id here
 favicons: "/assets/images/favicon" # Path to your favicon
-footerlink: https://kuwushagra.github.io # Link to other social media or linktree, whatever you wish
+footerlink: https://kushagrabhagat.netlify.app # Link to other social media or linktree, whatever you wish
 headercomponents: # Name and link of pages displayed in header
   - name: "About"
     url: "/about"
