@@ -5,7 +5,7 @@ description: A Jekyll powered personal portfolio website theme # Site desciption
 baseurl: "/Ocean-of-Opportunities" # Path to repository, if using in 'yourname.github.io' repository, change to "" (blank) else put repository name here.
 url: "https://kuwushagra.github.io" # URL of your website
 author: Kushagra Bhagat # Name of the author, which also appears in the footer
-defaultimage: "/assets/images/banner.png" # Default banner image that will appear when you share a link to any page on another platform
+defaultimage: "https://raw.githubusercontent.com/kuwushagra/Ocean-of-Opportunities/refs/heads/main/assets/images/banner.png" # Default banner image that will appear when you share a link to any page on another platform
 githublink: https://github.com/yourgithubusername # Link to your GitHub profile
 mailaddress: youremailadresshere # Put your e-mail id here
 favicons: "/assets/images/favicon" # Path to your favicon
