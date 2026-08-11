@@ -8,7 +8,7 @@ layout: default
     </div><br><br>
     
     <div class="glowing-box" style="display: block; width: 100%;">
-      <div style="display: flex"><div style="margin-top: auto; margin-bottom: auto;"><br><h1>{{ page.title }}</h1></div></div>
+      <div style="display: flex"><div style="margin-top: auto; margin-bottom: auto;"><br>{% if page.alttitle %}<h1>{{ page.alttitle }}</h1>{% else %}<h1>{{ page.title }}</h1>{% endif %}</div></div>
       <hr>
       <img src="{{ page.image }}"><br>
       <div style="text-align: center">{{ page.description }}<br>Published On: {{ page.date | date: "%B %d, %Y" }}</div>
